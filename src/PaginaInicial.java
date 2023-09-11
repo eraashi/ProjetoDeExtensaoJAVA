@@ -37,12 +37,13 @@ public class PaginaInicial extends javax.swing.JFrame {
         jList3 = new javax.swing.JList<>();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
-        jTextField2 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
+        jButton4 = new javax.swing.JButton();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Página Inicial");
@@ -53,20 +54,20 @@ public class PaginaInicial extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));
-        jLabel1.setText("Bem Vindo à Central de Denúncias");
+        jLabel1.setText("Bem Vindo à Biblioteca Mero Carneiro");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(170, 30, 288, 25);
+        jLabel1.setBounds(150, 30, 330, 25);
 
-        jButton1.setText("Nova Denúncia");
+        jButton1.setText("Nova Movimentação");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(124, 350, 111, 23);
+        jButton1.setBounds(110, 350, 150, 23);
 
-        jTabbedPane1.setBorder(javax.swing.BorderFactory.createTitledBorder("Suas Denúncias"));
+        jTabbedPane1.setBorder(javax.swing.BorderFactory.createTitledBorder("Sua Movimentação"));
 
         jList4.setBorder(null);
         jList4.setModel(new javax.swing.AbstractListModel<String>() {
@@ -76,7 +77,7 @@ public class PaginaInicial extends javax.swing.JFrame {
         });
         jScrollPane4.setViewportView(jList4);
 
-        jTabbedPane1.addTab("Não respondidas", jScrollPane4);
+        jTabbedPane1.addTab("Emprestados", jScrollPane4);
 
         jList2.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -85,7 +86,7 @@ public class PaginaInicial extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jList2);
 
-        jTabbedPane1.addTab("Respondidas", jScrollPane2);
+        jTabbedPane1.addTab("Devolvidos", jScrollPane2);
 
         jList3.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -94,35 +95,20 @@ public class PaginaInicial extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(jList3);
 
-        jTabbedPane1.addTab("Protocolos", jScrollPane3);
+        jTabbedPane1.addTab("Acervo", jScrollPane3);
 
         getContentPane().add(jTabbedPane1);
         jTabbedPane1.setBounds(29, 72, 301, 250);
         getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(370, 120, 210, 10);
+        jSeparator1.setBounds(370, 140, 210, 10);
 
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
         getContentPane().add(jSeparator2);
         jSeparator2.setBounds(350, 80, 20, 300);
 
-        jTextField2.setToolTipText("Nome, CNPJ etc...");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(370, 90, 120, 22);
-
-        jLabel3.setText("Notícias:");
+        jLabel3.setText("Atualização de Catálogo:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(370, 130, 60, 16);
-
-        jTextPane1.setText("A internet oferece incríveis facilidades para realizar compras e fazer bons negócios. Pesquisar preços, comprar e receber o produto em casa são algumas das possibilidades do mundo virtual. Porém, pessoas que agem de má-fé estão em muitos lugares, assim como golpes do comércio eletrônico.  ");
-        jScrollPane1.setViewportView(jTextPane1);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(370, 160, 210, 170);
+        jLabel3.setBounds(370, 150, 140, 16);
 
         jButton2.setText("Sair");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -133,22 +119,36 @@ public class PaginaInicial extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(500, 380, 72, 23);
 
-        jButton3.setText("Pesquisar");
-        getContentPane().add(jButton3);
-        jButton3.setBounds(495, 90, 80, 23);
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Pesquisa por ISBN-13"));
+        jPanel1.setLayout(null);
+        jPanel1.add(jTextField1);
+        jTextField1.setBounds(10, 20, 100, 22);
+
+        jButton4.setText("Pesquisar");
+        jPanel1.add(jButton4);
+        jButton4.setBounds(120, 20, 80, 23);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(370, 80, 210, 50);
+
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane5.setViewportView(jList1);
+
+        getContentPane().add(jScrollPane5);
+        jScrollPane5.setBounds(370, 170, 200, 146);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.dispose();
-        PagDenuncia denuncias = new PagDenuncia();
+        PagMovimento denuncias = new PagMovimento();
         denuncias.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.dispose();
@@ -195,20 +195,21 @@ public class PaginaInicial extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JList<String> jList1;
     private javax.swing.JList<String> jList2;
     private javax.swing.JList<String> jList3;
     private javax.swing.JList<String> jList4;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

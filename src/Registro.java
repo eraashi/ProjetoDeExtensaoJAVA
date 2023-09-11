@@ -130,7 +130,7 @@ public class Registro extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Dados Pessoais"));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Dados Pessoais do Funcionário"));
 
         jLabel4.setText("Nome Completo:");
 
